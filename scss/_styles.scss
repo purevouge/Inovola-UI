@@ -1,0 +1,588 @@
+/* CSS Document */
+/*=============================================================================
+   doc Info
+========================================================================== */
+/***
+	nav : nrml:#fff hover/active:#fff bg:#0,0,0,0.25 font:optimamedium
+	banner : #fff; font:optimabold
+	heading : font:optimabold #2a2a2a
+	text : font:optimamedium #121212
+	background: #fff
+	call to action :font:optimabold #fff bg: #d23741
+/*=============================================================================
+   fonts face
+========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+/*=============================================================================
+  vars 
+========================================================================== */
+$font-body: 'Montserrat', sans-serif;
+$font-head: 'Alfa Slab One', cursive;
+$font-title: 'Bebas Neue', cursive;
+$font-nav: 'Bebas Neue', cursive;
+$font-body-color:#3d3d3d;
+$main-txt-color: #3d2514;
+$link-hover: #502c12;
+$c2a-bg: #bf2222;
+/*=============================================================================
+  typography
+========================================================================== */
+h1, h2, h3, h4, h5, h6{font-family: $font-head; color: $main-txt-color}
+/*=============================================================================
+  common
+========================================================================== */
+html, body{min-height: 100%;}
+body {font: 16px $font-body; color: $font-body-color; background: #fffffe;}
+/*=============================================================================
+  helpers
+========================================================================== */
+.noBorder{ border:0 !important;}
+.sndBck{z-index:-1 !important;}
+/*=============================================================================
+  fixes
+========================================================================== */
+
+/*=============================================================================
+  reset
+========================================================================== */
+.form-control:focus{
+   border-color: rgba(0, 0, 0, 0.25);
+   -webkit-box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.25);
+   box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.25);
+   border: 1px solid $c2a-bg;
+   box-shadow: none;
+}  
+/*=============================================================================
+  UI
+========================================================================== */
+/*** btns ***/
+.btn-main{
+  background-color: $c2a-bg;
+  color: #fff;
+  position: relative;
+  padding: .75rem 2rem;
+  font-family: $font-head;
+  font-size: 1rem;
+  border-radius: 0;
+  text-transform: uppercase;
+  &:hover{
+     box-shadow: 0px 5px 10px -4px #000;
+     text-shadow: 0px 0px 1px #3c0303;
+     color: #fff;
+  }
+} 
+a, .btn-link{color: $main-txt-color; font-family: $font-nav; font-size: 15px;}
+a:hover, .btn-link:hover{color: $link-hover; text-decoration: none;}
+a, li, .btn{
+  -webkit-transition: all .5s ease-in-out,padding .5s ease-in-out;
+  -moz-transition: all .5s ease-in-out,padding .5s ease-in-out;
+  transition: all .5s ease-in-out,padding .5s ease-in-out;
+} 
+/*=============================================================================
+  components
+========================================================================== */
+.head-sec{
+  text-align: center;
+  h5{
+    background: #ffc045;
+    display: inline-block;
+    padding: .75rem 1.5rem;
+    font-family: $font-title;
+    font-size: 1.5rem;
+    color: $main-txt-color;
+    margin: 0;
+  }
+  h2{
+    font-size: 3rem;
+    text-transform: uppercase;
+    margin-top: 2rem;
+    margin-bottom: .5rem;
+    small{
+      font-family: $font-title;
+      font-size: 2rem;
+      display: block;
+    }
+  }
+  p.sub{
+    width: 90%;
+    margin: 0 auto;
+    color: $main-txt-color;
+  }
+}
+/*=============================================================================
+  banner
+========================================================================== */
+.banner{
+  background-image: url(../img/banner-bg.jpg);
+  background-repeat: repeat;
+  padding: 3rem 0;
+  .hero-txt{
+    padding: 100px 0;
+    p{
+      font-family: $font-title;
+      font-size: 1.5rem;
+      color: $main-txt-color;
+      border: 2px $main-txt-color dashed;
+      display: inline-block;
+      padding: 10px 15px 5px;
+    }
+    h1{
+      font-size: 7rem;
+      text-transform: uppercase;
+      text-shadow: 4px 5px 0 #fee8bc;
+      position: relative;
+      z-index: 9;
+      small{
+        display: block;
+        font-size: 3.5rem;
+      }
+    }
+  }
+  .hero-img{
+    margin-top: -90px;
+    position: relative;
+    img{
+      position: relative;
+      top: 0px;
+      left: 0px;
+      -webkit-transition: all .5s ease-in-out,all .5s ease-in-out;
+      -moz-transition: all .5s ease-in-out,all .5s ease-in-out;
+      transition: all .5s ease-in-out,all .5s ease-in-out;
+      &:hover{
+        position: relative;
+        top: 5px;
+        left: 6px;
+      }
+    }
+    .price-wrap{
+      background: #bf2222;
+      color: #fff;
+      width: 175px;
+      height: 175px;
+      border-radius: 50%;
+      position: absolute;
+      bottom: 2rem;
+      left: 1rem;
+      -webkit-transition: all .5s ease-in-out,all .5s ease-in-out;
+      -moz-transition: all .5s ease-in-out,all .5s ease-in-out;
+      transition: all .5s ease-in-out,all .5s ease-in-out;
+      .price-inner{
+        border: 2px dashed #fff;
+        border-radius: 50%;
+        width: 155px;
+        height: 155px;
+        margin-top: 10px;
+        margin-left: 10px;
+        text-align: center;
+        .price{
+          font-family: $font-title;
+          position: relative;
+          top: 2.4rem;
+          line-height: 2rem;
+          span{
+            font-size: 4rem;
+          }
+          small{
+            font-size: 2rem;
+          }
+          p{
+            font-size: 2rem;
+            letter-spacing: 12px;
+            margin: 0;
+            display: inline-block;
+            padding-left: 12px;
+          }
+        }
+      }
+    }
+    &:hover{
+      .price-wrap{
+        bottom: 1rem;
+        left: .5rem;
+      }
+    }
+  }
+}
+/*=============================================================================
+  header
+========================================================================== */
+header{
+  position: relative;
+  z-index: 9;
+  .navbar-brand{
+    padding: 0;
+  }
+  .navbar-toggler{
+    color: #0c0b54;
+  }
+  p{
+    font-size: 1rem;
+    font-weight: 600;
+    color: $main-txt-color;
+    text-align: right;
+    position: relative;
+    display: inline-block;
+    padding-left: 45px;
+    &::before{
+      content: "";
+      width: 43px;
+      height: 35px;
+      position: absolute;
+      left: 0;
+      top: -10px;
+      background: url(../img/delivery-icon.png) no-repeat;
+    }
+  }
+  nav{
+    a{
+      font-size: 1.3rem;
+      text-transform: uppercase;
+      letter-spacing: 4.17px; 
+      overflow: hidden;
+      display: inline-block;
+      position: relative;
+      padding: 0 1rem;
+      &:last-of-type{
+        padding-right: 0 !important;
+      }
+      .wrap{
+        position: relative;
+        display: inline-block;
+        -webkit-transition: -webkit-transform 0.3s;
+        -moz-transition: -moz-transform 0.3s;
+        transition: transform 0.3s;
+        &::before {
+          position: absolute;
+          top: 100%;
+          content: attr(data-hover);
+          font-weight: 700;
+          -webkit-transform: translate3d(0,0,0);
+          -moz-transform: translate3d(0,0,0);
+          transform: translate3d(0,0,0);
+        }
+      }
+      &:hover{
+        .wrap{
+          -webkit-transform: translateY(-100%);
+          -moz-transform: translateY(-100%);
+          transform: translateY(-100%);
+        }
+      }
+      .dsk-hide{
+        display: none;
+      }  
+    }
+  }
+}
+/*=============================================================================
+  new products
+========================================================================== */
+.new-product{
+  padding: 80px 0;
+  .item{
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+    img{
+      transition: transform .5s ease;
+      &:hover{
+        transform: scale(1.1);
+      }
+    }
+    .title{
+      position: absolute;
+      top: 30px;
+      left: 40px;
+      h2{
+        color: #fff;
+        font-family: $font-title;
+        font-size: 2rem;
+        line-height: 1;
+        small{
+          display: block;
+        }
+      }
+    }
+    &.tm-2{
+      margin-top: 2rem;
+    }
+  }
+}
+/*=============================================================================
+  feat. products
+========================================================================== */
+.feat-product{
+  text-align: center;
+  .product-list{
+    margin-top: 4rem;
+    .item{
+      img{
+        position: relative;
+        top: 0;
+        transition: top .5s ease;
+      }
+      h2{
+        font-family: $font-title;
+        font-size: 2.5rem;
+      }
+      p{
+        color: $main-txt-color;
+        margin-bottom: 2rem;
+      }
+      &:hover{
+        img{
+          top: -10px;
+        }
+      }
+    }
+  }
+}
+/*=============================================================================
+  news
+========================================================================== */
+.news{
+  margin-top: 8rem;
+  box-shadow: 18.656px 24.758px 43px 0px rgba(0, 0, 0, 0.17);
+  padding: 1.5rem;
+  .txt{
+    padding: 2rem;
+    h2{
+      font-family: $font-head;
+      font-size: 2rem;
+      text-transform: uppercase;
+      small{
+        display: block;
+        font-family: $font-title;
+        color: $font-body-color;
+        font-size: 1.5rem;
+      }
+    }
+    p{
+      font-size: 1.2rem;
+      line-height: 2rem;
+    }
+  }
+  .img-container{
+    overflow: hidden;
+    img{
+      transition: transform .5s ease;
+      &:hover{
+        transform: scale(1.1);
+      }
+    }
+  }
+  .carousel-indicators{
+    right: auto;
+    left: 28px;
+    margin: auto;
+    li{
+      background-color: #dcdcdc;
+      width: 1rem;
+      height: 1rem;
+      border-radius: 50%;
+      &.active{
+        background-color: #ffc045;
+      }
+    }
+  }
+}
+/*=============================================================================
+  call2act
+========================================================================== */
+.call2act{
+  padding: 90px 0 180px;
+  background-image: url(../img/call2act/bg-l.png), url(../img/call2act/bg-r.png);
+  background-position: top 0 left 0, bottom 0 right 0;
+  background-repeat: no-repeat;
+  form{
+    input{
+      min-height: 4rem;
+    }
+    .btn{
+      min-height: 4rem;
+      border-radius: .25rem;
+    }
+  }
+}
+/*=============================================================================
+  footer
+========================================================================== */
+footer{
+  padding: 5rem 3rem 2rem;
+  margin-bottom: 4rem;
+  position: relative;
+  background: url(../img/footer-bg.jpg) no-repeat;
+  p{
+    color: #fff;
+    font-family: $font-title;
+    &.contact{
+      padding-left: 20px;
+      i{
+        font-size: 2rem;
+        position: relative;
+        top: 6px;
+        left: -10px;
+      }
+    }
+  }
+  ul{
+    margin: 0;
+    color: #fff;
+    li{
+      a{
+        color: #000;
+        background: #fff;
+        display: block;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        text-align: center;
+        font-size: 1rem;
+        line-height: 2;
+      }
+    }
+  }
+}
+/*=============================================================================
+  modal
+========================================================================== */
+
+/*=============================================================================
+  responsive fixes
+========================================================================== */
+@media (max-width: 1200px) { 
+
+}
+@media (max-width: 1024px) { 
+
+}
+@media (max-width: 992px) { 
+  .container{
+    max-width: none;
+  }
+  .banner{
+    .hero-txt{
+      h1{
+        font-size: 6rem;
+      }
+    } 
+  } 
+}
+@media (max-width: 768px) {
+  .banner{
+    .hero-txt{
+      padding: 0;
+    } 
+    header{
+      position: relative;
+      p{
+        position: absolute;
+        top: -29px;
+        right: 0;
+      }
+      nav{
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+      }
+    }
+  } 
+  .call2act{
+    form{
+      padding: 2rem;
+      border-radius: 5px;
+      background: rgba(255, 255, 255, .75);
+    }
+  }
+  footer{
+    background-size: cover;
+  }
+}
+@media (max-width: 520px) { 
+  .banner{
+    .hero-txt{
+      h1{
+        font-size: 4rem;
+      }
+      p{
+        font-size: 1.2rem;
+      }
+    } 
+   .hero-img{
+    .price-wrap{
+      width: 120px;
+      height: 120px;
+      .price-inner{
+        width: 100px;
+        height: 100px;
+        .price{
+          top: 1.5rem;
+          line-height: 1.5rem;
+          span{
+            font-size: 2.5rem;
+          }
+          small{
+            font-size: 1.5rem;
+          }
+          p{
+            font-size: 1.2rem;
+            letter-spacing: 10px;
+          }
+        }
+      }
+    }
+   }
+  } 
+  header{
+    nav{
+      a{
+        .dsk-hide{
+          display: inline-flex;
+        }
+        .mob-hide{
+          display: none;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 460px) {
+  .banner{
+    .hero-img{
+      .price-wrap{
+        bottom: 0;
+      }
+     }
+  }
+  .new-product{
+    .item {
+      .title{
+        h2{
+          font-size: 1.5rem;
+        }
+      }
+    }
+  } 
+}
+@media (max-width: 380px) {
+  .banner{
+    .hero-txt{
+      p{
+        font-size: 1rem;
+      }
+    } 
+  } 
+  header{
+    p{
+      font-size: 14px;
+    }
+    nav{
+      a{
+        font-size: 1.2rem;
+        letter-spacing: 2px;
+      }
+    }
+  }
+}
